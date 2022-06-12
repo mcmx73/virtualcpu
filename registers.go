@@ -20,3 +20,15 @@ type Flag interface {
 	Set(bool)
 	Get() bool
 }
+
+type byteRegister struct {
+	value byte
+}
+
+func (b byteRegister) Set(data byte) {
+	b.value = data
+}
+
+func (b byteRegister) Get() byte {
+	return b.value
+}
