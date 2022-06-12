@@ -1,6 +1,20 @@
 package virtualcpu
 
 type MemoryInterface interface {
-	Set(address int16, data byte)
-	Get(address int16) (data byte)
+	Set(address Word, data byte)
+	Get(address Word) (data byte)
+}
+
+type MemoryDefault struct {
+	memoryData [0xFFFF]byte
+}
+
+func (m *MemoryDefault) Set(address Word, data byte) {
+	//TODO implement me
+	panic("implement me")
+}
+
+func (m *MemoryDefault) Get(address Word) (data byte) {
+	//TODO implement me
+	panic("implement me")
 }

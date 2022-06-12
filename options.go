@@ -22,3 +22,9 @@ func SetByteRegistersDefault() Option {
 		}
 	}
 }
+
+func SetMemoryDefault() Option {
+	return func(c *CpuCore) {
+		c.memory = &MemoryDefault{}
+	}
+}

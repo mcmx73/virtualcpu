@@ -33,6 +33,8 @@ type CpuCore struct {
 	// Flags
 	ZF Flag
 	CF Flag
+	// Mem
+	memory MemoryInterface
 }
 
 type RegID int8
